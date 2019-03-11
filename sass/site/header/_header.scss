@@ -1,0 +1,73 @@
+.site-header {
+    max-width: $max__width;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 10;
+
+}
+
+.site-branding a img {
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin-left: 20px;
+}
+
+.site-title {
+    display: none;
+}
+
+.site-description {
+    display: none;
+}
+
+#primary-menu {
+
+	a {
+        color: $color__heading-black;
+		text-decoration: none;
+		
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+.header-image {
+    margin: 0 !important;
+   
+    img {
+        width: 100%; //100vw (when the image is small, it will be stretch)
+        height: 50vh;
+        object-fit: cover; //fill image
+        overflow: hidden;
+        display: block;
+    }
+
+    &::after {
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 40%) !important;
+        display: block;
+        height: 50vw;
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        content: '';
+
+        @media screen and (min-width: 780px) and (max-width: 900px) {
+            top: 8%;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .site-branding a img {
+        width: 135px;
+        height: 70px;
+    }
+}
+
+@import "header-menu";
+

@@ -1,0 +1,13 @@
+.site-content {
+    margin: 0 auto;
+    max-width: 964px;
+
+
+    @media screen and (max-width: $query__small){
+        padding: 1em;
+    }
+
+    @media screen and (max-width: $query__medium){
+        padding: 2em;
+    }
+}

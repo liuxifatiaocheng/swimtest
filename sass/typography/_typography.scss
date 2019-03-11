@@ -1,0 +1,25 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: 'Source Sans Pro', sans-serif;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+
+	@media screen and (max-width: 768px) {
+		@include font-size(0.89);
+	}
+
+	@media screen and (max-width: 320px) {
+		@include font-size(0.7);
+	}
+}
+
+@import "headings";
+
+@import "copy";
+
+
